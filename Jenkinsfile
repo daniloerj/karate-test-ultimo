@@ -18,7 +18,7 @@ pipeline {
     }
     post {
         always {
-            archiveArtifacts artifacts: 'target/karate-reports/**/*.*', fingerprint: true
+            archiveArtifacts artifacts: 'target/cucumber-html-reports/**/*.*', fingerprint: true
             junit 'target/surefire-reports/*.xml'
         }
     }
